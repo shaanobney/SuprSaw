@@ -1,0 +1,408 @@
+@font-face {
+    font-family: cham;
+    src: url(./assets/fonts/cham.ttf);
+}
+
+@font-face {
+    font-family: code;
+    src: url(./assets/fonts/codeBold.ttf);
+}
+
+@media (max-width: 750px) {
+    iframe {
+        width: 100% !important;
+    }
+}
+
+html, body {
+    padding: 0px;
+    margin: 0px;
+    height: calc(100%);
+    font-family: cham;
+    background-color: #a8a8a8;
+}
+
+#MobileStart {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#MobileStart #Button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: pink;
+    color: crimson;
+    border-radius: 5px;
+    margin-top: -40px;
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+}
+
+#MobileStart #Button:hover {
+    background-color: pink;
+    color: white;
+}
+
+#MobileStart #Button:hover:active {
+    background-color: #ED33CF;
+    color: #22DBC0;
+}
+
+#Content {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#Content #Title {
+    height: 23px;
+    text-align: center;
+    line-height: 23px;
+    font-size: 1.2em;
+    color: white;
+    width: calc(100% - 15px);
+    padding-left: 15px;
+    background-color: black;
+}
+
+#Content #Explanation {
+    position: relative;
+    padding: 15px;
+    color: black;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-top-width: 0px;
+    width: 100%;
+}
+
+#Content #Explanation img {
+    width: 80%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#Content a {
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#Content a:hover {
+    color: #1EDF3E;
+}
+
+#Content a:hover:active {
+    color: #ED33CF;
+}
+
+#Content #DragContainer {
+    margin: 10px auto;
+    margin-left: 25px;
+    width: calc(100% - 120px);
+    height: 100px;
+    position: relative;
+    background-color: #969696;
+    border: 1px solid #969697;
+    box-shadow: 0px 2px 0px 0px #545454;
+    border-radius: 5px;
+    float: left;
+}
+
+#Content .Slider.x {
+    position: relative;
+    height: 54px;
+    width: 100%;
+    margin-top: 3px;
+}
+
+#Content .Slider.x .Axis {
+    top: 50%;
+    margin-top: -1.5px;
+}
+
+#Content .Slider.y {
+    position: relative;
+    width: 94px;
+    height: 400px;
+}
+
+#Content .Slider.y .Axis {
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+#SUPRSAW.Dragger {
+  border-radius: 50% !important;
+width: 75px !important;
+height: 75px !important;
+margin-top: 10px !important;
+margin-left: 10px !important;
+}
+
+#SUPRSAW.Dragger is--pointer-down {
+  border: 1px solid purple;
+}
+
+#DragContainer .Dragger #Name {
+  line-height: 75px !important;
+}
+
+#DragContainer #xAxis {
+  color: transparent !important;
+  background-color: transparent !important;
+}
+
+#DragContainer #yAxis {
+  color: transparent !important;
+  background-color: transparent !important;
+}
+
+#Content .Dragger {
+    width: 80px;
+    height: 50px;
+    position: absolute;
+    background-color: #3f3f3f;
+    border-radius: 5%;
+    z-index: 1;
+    margin-top: 2px;
+    border: 1px solid #696969;
+    cursor: -webkit-grab;
+}
+
+#Content .Dragger #Name {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    font-size: 12px;
+    line-height: 50px;
+    color: white;
+}
+
+#Content .Dragger:hover {
+    background-color: #696969;
+    color: white;
+}
+
+#Content .Dragger.is-pointer-down {
+    cursor: -webkit-grabbing;
+    background-color: #e05528;
+}
+
+#Content .Dragger.is-pointer-down #Name {
+    color: #696969;
+}
+
+#Content .Axis {
+    position: absolute;
+    background-color: black;
+    width: 3px;
+    height: 3px;
+    top: 3px;
+    left: 3px;
+    border-radius: 1px;
+    z-index: 0;
+}
+
+#Content #xAxis {
+    width: calc(100% - 6px);
+    background-color: #3f3f3f;
+}
+
+#Content #yAxis {
+    height: calc(100% - 6px);
+}
+
+#Content .Button {
+    width: 30%;
+    font-family: code;
+    margin: 0 auto;
+    margin-left: 10px;
+    margin-right: 8px;
+    height: 50px;
+    background-color: #3f3f3f;
+    line-height: 50px;
+    box-shadow: 0px 5px 0px 0px #545454;
+    color: #e05528;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+#Content .Button:hover {
+    color: #e05528;
+    background-color: #696969;
+}
+
+#Content .Button:hover:active, #Content #Content .Button:hover:active.Active {
+    color: #e05528;
+    background-color: #3f3f3f;
+}
+
+#Content .Button.Toggle.Active {
+    box-sizing: border-box;
+    line-height: 50px;
+    color: #696969;
+    background-color: #7e7e7e;
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    box-shadow: 0px 1px 0px 0px;
+}
+
+#Content .Transport {
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    line-height: 30px;
+    color: #a8a8a8;
+    border-radius: 10px;
+    margin-top: 3px;
+    position: relative;
+}
+
+#Content .Transport #Position {
+    width: 70px;
+    left: 50%;
+    margin-left: -35px;
+    text-align: left;
+    height: 100%;
+    position: absolute;
+    color: white;
+}
+
+#Loading {
+    z-index: 100000;
+    position: absolute;
+    background-color: rgba(140, 140, 140, 0.5);
+    width: 100%;
+    height: calc(100% - 37.5px);
+    top: 37.5px;
+    left: 0px;
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+
+#Loading #Text {
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+    height: 60px;
+    margin-top: -30px;
+    line-height: 60px;
+    font-size: 42px;
+}
+
+#Loading.Loaded {
+    pointer-events: none;
+    opacity: 0;
+}
+
+#Sliders {
+  width: 48%;
+  margin-left: 10px;
+  position: relative;
+  float: left;
+}
+
+#Sliders2 {
+  width: 45%;
+  margin-right: 10px;
+  position: relative;
+  float: right;
+}
+
+#Beats {
+  position: relative;
+  margin: auto;
+  width: 100%;
+}
+
+#Holder {
+  position: relative;
+  margin-top: 10px;
+  height: 180px;
+  width: auto;
+}
+
+#ButtonHome {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  margin-top: 5px;
+}
+
+#ButtonHome2 {
+  margin-top: 5px;
+  margin-right: 0px;
+  margin-left: 10px;
+  width: 55px;
+  float: left;
+}
+
+#ButtonHome2 .Button.Toggle {
+  color: #cd5c5c !important;
+  width: 50px;
+  margin: 2px auto;
+  margin-left: 5px;
+  margin-top: 5px;
+  background: #969696;
+  height:45px;
+  z-index: 1;
+  box-shadow: 0px 3px 0px 0px #545454 !important;
+}
+
+#ButtonHome2 .Button.Toggle.Active {
+  color: #b7dca9 !important;
+  width: 50px;
+  margin: 2px auto;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  background: #969696;
+  height: 45px;
+  z-index: 1;
+  box-shadow: 0px 0px 0px 0px #545454 !important;
+}
+
+#matrix1 {
+  width: 100% !important;
+  margin: auto !important;
+}
+
+.circle {
+	border-radius: 50%;
+  background-color: #cd5c5c;
+  color: #cd5c5c;
+	width: 8px;
+	height: 8px;
+  left: 26px;
+  top: 60px;
+  z-index: 2;
+  position: relative;
+  /* width and height can be anything, as long as they're equal */
+}
+
+
+#DragContainer .Dragger.is-pointer-down {
+    cursor: -webkit-grabbing;
+    border: none;
+}
